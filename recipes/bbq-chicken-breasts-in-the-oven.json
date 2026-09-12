@@ -1,0 +1,29 @@
+{
+  "name": "BBQ Chicken Breasts in the Oven",
+  "description": "For busy weeknights when you want a quick and easy meal, try these BBQ chicken breasts that are baked in the oven and ready to serve in just under an hour.",
+  "servings": 4,
+  "prepTime": "55 min",
+  "tags": [
+    "publisher-tested"
+  ],
+  "ingredients": [
+    {
+      "name": "Whole skin-on, bone-in chicken breasts",
+      "amount": "4",
+      "unit": "",
+      "category": "meat"
+    },
+    {
+      "name": "Barbecue sauce",
+      "amount": "1",
+      "unit": "cup",
+      "category": "pantry"
+    },
+    {
+      "name": "Kosher salt and coarsely ground black pepper to taste",
+      "amount": "",
+      "unit": "",
+      "category": "herbs"
+    }
+  ]
+}
