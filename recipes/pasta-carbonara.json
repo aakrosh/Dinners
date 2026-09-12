@@ -1,0 +1,16 @@
+{
+  "name": "Pasta Carbonara",
+  "description": "A silky Roman pasta made with guanciale, eggs, and aged cheese. No cream.",
+  "servings": 4,
+  "prepTime": "25 min",
+  "tags": ["italian", "pasta", "quick"],
+  "ingredients": [
+    { "name": "Spaghetti",          "amount": "400", "unit": "g",    "category": "pantry" },
+    { "name": "Guanciale or pancetta","amount": "150","unit": "g",   "category": "meat"   },
+    { "name": "Eggs",               "amount": "4",   "unit": "",     "category": "dairy"  },
+    { "name": "Pecorino Romano",    "amount": "50",  "unit": "g",    "category": "dairy"  },
+    { "name": "Parmesan",           "amount": "50",  "unit": "g",    "category": "dairy"  },
+    { "name": "Black pepper",       "amount": "1",   "unit": "tsp",  "category": "herbs"  },
+    { "name": "Salt",               "amount": "",    "unit": "to taste","category": "pantry"}
+  ]
+}

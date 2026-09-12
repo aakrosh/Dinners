@@ -1,0 +1,21 @@
+{
+  "name": "Tacos al Pastor",
+  "description": "Marinated pork with guajillo chili, pineapple, and achiote. A Mexico City classic.",
+  "servings": 6,
+  "prepTime": "45 min + 4 hr marinade",
+  "tags": ["mexican", "pork", "tacos"],
+  "ingredients": [
+    { "name": "Pork shoulder",        "amount": "2",  "unit": "lbs",  "category": "meat"   },
+    { "name": "Guajillo chilies",     "amount": "4",  "unit": "",     "category": "produce"},
+    { "name": "Pineapple",            "amount": "½",  "unit": "",     "category": "produce"},
+    { "name": "White onion",          "amount": "1",  "unit": "",     "category": "produce"},
+    { "name": "Garlic",               "amount": "5",  "unit": "cloves","category": "produce"},
+    { "name": "Limes",                "amount": "3",  "unit": "",     "category": "produce"},
+    { "name": "Corn tortillas",       "amount": "18", "unit": "",     "category": "pantry" },
+    { "name": "Chipotle in adobo",    "amount": "2",  "unit": "tbsp", "category": "pantry" },
+    { "name": "White vinegar",        "amount": "2",  "unit": "tbsp", "category": "pantry" },
+    { "name": "Cumin",                "amount": "1",  "unit": "tsp",  "category": "herbs"  },
+    { "name": "Dried oregano",        "amount": "1",  "unit": "tsp",  "category": "herbs"  },
+    { "name": "Fresh cilantro",       "amount": "1",  "unit": "bunch","category": "herbs"  }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Shakshuka",
+  "description": "Eggs poached in a spiced tomato and pepper sauce, finished with feta and fresh herbs.",
+  "servings": 4,
+  "prepTime": "35 min",
+  "tags": ["vegetarian", "eggs", "quick", "middle eastern"],
+  "ingredients": [
+    { "name": "Eggs",              "amount": "6",   "unit": "",       "category": "dairy"  },
+    { "name": "Canned tomatoes",   "amount": "2",   "unit": "cans",   "category": "pantry" },
+    { "name": "Red bell pepper",   "amount": "1",   "unit": "",       "category": "produce"},
+    { "name": "Yellow onion",      "amount": "1",   "unit": "",       "category": "produce"},
+    { "name": "Garlic",            "amount": "4",   "unit": "cloves", "category": "produce"},
+    { "name": "Feta cheese",       "amount": "100", "unit": "g",      "category": "dairy"  },
+    { "name": "Olive oil",         "amount": "3",   "unit": "tbsp",   "category": "pantry" },
+    { "name": "Cumin",             "amount": "1",   "unit": "tsp",    "category": "herbs"  },
+    { "name": "Smoked paprika",    "amount": "1",   "unit": "tsp",    "category": "herbs"  },
+    { "name": "Cayenne",           "amount": "¼",   "unit": "tsp",    "category": "herbs"  },
+    { "name": "Fresh parsley",     "amount": "1",   "unit": "bunch",  "category": "herbs"  },
+    { "name": "Crusty bread",      "amount": "",    "unit": "to serve","category": "pantry"}
+  ]
+}

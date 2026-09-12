@@ -1,0 +1,21 @@
+{
+  "name": "Vegetable Stir-Fry",
+  "description": "A fast, high-heat stir-fry with seasonal vegetables in a savory garlic-ginger sauce.",
+  "servings": 4,
+  "prepTime": "25 min",
+  "tags": ["vegetarian", "asian", "quick"],
+  "ingredients": [
+    { "name": "Broccoli",       "amount": "1",   "unit": "head",  "category": "produce"},
+    { "name": "Bell peppers",   "amount": "2",   "unit": "",      "category": "produce"},
+    { "name": "Snap peas",      "amount": "200", "unit": "g",     "category": "produce"},
+    { "name": "Carrots",        "amount": "2",   "unit": "",      "category": "produce"},
+    { "name": "Garlic",         "amount": "3",   "unit": "cloves","category": "produce"},
+    { "name": "Fresh ginger",   "amount": "1",   "unit": "inch",  "category": "produce"},
+    { "name": "Green onions",   "amount": "4",   "unit": "",      "category": "produce"},
+    { "name": "Soy sauce",      "amount": "3",   "unit": "tbsp",  "category": "pantry" },
+    { "name": "Sesame oil",     "amount": "1",   "unit": "tbsp",  "category": "pantry" },
+    { "name": "Cornstarch",     "amount": "1",   "unit": "tbsp",  "category": "pantry" },
+    { "name": "Jasmine rice",   "amount": "2",   "unit": "cups",  "category": "pantry" },
+    { "name": "Sesame seeds",   "amount": "1",   "unit": "tbsp",  "category": "pantry" }
+  ]
+}
