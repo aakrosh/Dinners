@@ -1,0 +1,23 @@
+{
+  "name": "Cold Peanut Butter Noodles with Chicken",
+  "description": "Can't find udon noodles? Make this dish with spaghetti — like Rach's mom used to do.",
+  "servings": 4,
+  "prepTime": "20 min",
+  "tags": ["chicken", "noodles", "asian", "cold", "quick"],
+  "ingredients": [
+    { "name": "Rotisserie chicken, chilled",  "amount": "1",    "unit": "",     "category": "meat"   },
+    { "name": "Udon noodles or spaghetti",    "amount": "8",    "unit": "oz",   "category": "pantry" },
+    { "name": "Smooth peanut butter",         "amount": "¼",    "unit": "cup",  "category": "pantry" },
+    { "name": "Apple juice",                  "amount": "¼",    "unit": "cup",  "category": "pantry" },
+    { "name": "Rice vinegar",                 "amount": "¼",    "unit": "cup",  "category": "pantry" },
+    { "name": "Soy sauce",                    "amount": "¼",    "unit": "cup",  "category": "pantry" },
+    { "name": "Honey",                        "amount": "1",    "unit": "tbsp", "category": "pantry" },
+    { "name": "Toasted sesame oil",           "amount": "1",    "unit": "tbsp", "category": "pantry" },
+    { "name": "Hot chile sauce or crushed red pepper", "amount": "1–2", "unit": "tsp", "category": "herbs" },
+    { "name": "Celery with leafy tops",       "amount": "3",    "unit": "stalks","category": "produce"},
+    { "name": "Radishes",                     "amount": "4",    "unit": "",     "category": "produce"},
+    { "name": "Scallions",                    "amount": "4–5",  "unit": "",     "category": "produce"},
+    { "name": "Bean sprouts",                 "amount": "1",    "unit": "cup",  "category": "produce"},
+    { "name": "Toasted sesame seeds",         "amount": "¼",    "unit": "cup",  "category": "pantry" }
+  ]
+}
