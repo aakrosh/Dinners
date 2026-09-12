@@ -1,0 +1,51 @@
+{
+  "name": "Mississippi Pot Roast",
+  "description": "Mississippi pot roast is easy to make in a slow cooker with a chuck roast, au jus gravy, and pepperoncini peppers for fork-tender, flavorsome results.",
+  "servings": 8,
+  "prepTime": "485 min",
+  "tags": [],
+  "ingredients": [
+    {
+      "name": "Chuck roast",
+      "amount": "1",
+      "unit": "",
+      "category": "meat"
+    },
+    {
+      "name": "Jar pepperoncini",
+      "amount": "0.5",
+      "unit": "",
+      "category": "herbs"
+    },
+    {
+      "name": "Jar pepperoncini juice",
+      "amount": "0.5",
+      "unit": "",
+      "category": "herbs"
+    },
+    {
+      "name": "Unsalted butter",
+      "amount": "0.5",
+      "unit": "cup",
+      "category": "dairy"
+    },
+    {
+      "name": "Packet au jus gravy mix",
+      "amount": "1",
+      "unit": "",
+      "category": "pantry"
+    },
+    {
+      "name": "Package buttermilk ranch dressing mix",
+      "amount": "1",
+      "unit": "",
+      "category": "dairy"
+    },
+    {
+      "name": "salt and ground black pepper",
+      "amount": "",
+      "unit": "to taste",
+      "category": "herbs"
+    }
+  ]
+}
