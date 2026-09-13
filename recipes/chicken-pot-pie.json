@@ -1,0 +1,16 @@
+{
+  "name": "Chicken Pot Pie",
+  "description": "Creamy chicken and vegetable filling baked inside Pepperidge Farm puff pastry shells. The recipe from the box.",
+  "servings": 6,
+  "prepTime": "35 min + 20 min bake",
+  "tags": ["chicken", "comfort", "baked", "quick"],
+  "ingredients": [
+    { "name": "Cooked chicken, cubed",                   "amount": "2",   "unit": "cups", "category": "meat"   },
+    { "name": "Pepperidge Farm Puff Pastry Shells",      "amount": "1",   "unit": "pkg",  "category": "pantry" },
+    { "name": "Campbell's Cream of Chicken Soup",        "amount": "1",   "unit": "can",  "category": "pantry" },
+    { "name": "Frozen peas and carrots",                 "amount": "10",  "unit": "oz",   "category": "produce"},
+    { "name": "Milk",                                    "amount": "½",   "unit": "cup",  "category": "dairy"  },
+    { "name": "Onion",                                   "amount": "1",   "unit": "medium","category": "produce"},
+    { "name": "Vegetable oil",                           "amount": "1",   "unit": "tbsp", "category": "pantry" }
+  ]
+}
