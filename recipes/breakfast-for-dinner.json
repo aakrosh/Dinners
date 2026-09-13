@@ -1,0 +1,22 @@
+{
+  "name": "Breakfast for Dinner",
+  "description": "Pancakes or waffles, scrambled eggs, and sausage patties. Uncheck whatever you're not making.",
+  "servings": 4,
+  "prepTime": "30 min",
+  "tags": ["breakfast", "eggs", "easy", "quick"],
+  "ingredients": [
+    { "name": "Eggs",                        "amount": "1",  "unit": "dozen", "category": "dairy"  },
+    { "name": "Milk",                        "amount": "2",  "unit": "cups",  "category": "dairy"  },
+    { "name": "Butter",                      "amount": "½",  "unit": "stick", "category": "dairy"  },
+    { "name": "Breakfast sausage patties",   "amount": "1",  "unit": "lb",   "category": "meat"   },
+    { "name": "All-purpose flour",           "amount": "1½", "unit": "cups",  "category": "pantry" },
+    { "name": "Baking powder",               "amount": "2",  "unit": "tsp",   "category": "pantry" },
+    { "name": "Baking soda",                 "amount": "½",  "unit": "tsp",   "category": "pantry" },
+    { "name": "Sugar",                       "amount": "1",  "unit": "tbsp",  "category": "pantry" },
+    { "name": "Vegetable oil",               "amount": "2",  "unit": "tbsp",  "category": "pantry" },
+    { "name": "Vanilla extract",             "amount": "1",  "unit": "tsp",   "category": "pantry" },
+    { "name": "Maple syrup",                 "amount": "",   "unit": "to serve", "category": "pantry" },
+    { "name": "Salt",                        "amount": "",   "unit": "to taste", "category": "herbs"  },
+    { "name": "Black pepper",                "amount": "",   "unit": "to taste", "category": "herbs"  }
+  ]
+}
