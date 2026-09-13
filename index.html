@@ -1107,7 +1107,8 @@ function removeExtra(id) {
 
 function toggleExtra(id) {
   const e = S.extras.find(e => e.id === id);
-  if (e) e.done = !e.done;
+  if (!e) return;
+  e.done = !e.done;
   saveState();
   // Patch DOM directly
   const el = document.querySelector(`.extra-item[data-extra-id="${CSS.escape(id)}"]`);
