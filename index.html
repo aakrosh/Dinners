@@ -681,15 +681,27 @@
       header, .float-bar, .action-row, .view-eyebrow { display: none !important; }
       #recipe-view { display: none !important; }
       #grocery-view { display: block !important; }
-      body, main { background: white; color: black; padding: 0; max-width: 100%; }
-      main { padding: 20px; }
-      .grocery-header { margin-bottom: 12px; }
-      .grocery-recipes { font-size: 13px; color: #555; font-style: italic; }
-      .grocery-item.done { display: none; }
-      .category-section { break-inside: avoid; page-break-inside: avoid; }
-      .item-check { border: 1px solid #999; background: white; }
-      .cat-heading { color: #555; border-bottom-color: #ccc; }
-      .grocery-item { border-bottom-color: #ddd; background: none !important; }
+      body, main { background: white; color: black; padding: 0; max-width: 100%; font-size: 11pt; }
+      main { padding: 12px 16px; }
+      .grocery-header { margin-bottom: 8px; }
+      .grocery-recipes { font-size: 9pt; color: #555; font-style: italic; }
+      .grocery-item.done, .extra-item.done { display: none; }
+      .category-section { break-inside: avoid; page-break-inside: avoid; margin-bottom: 10px; }
+      .extras-section { break-inside: avoid; page-break-inside: avoid; margin-bottom: 10px; }
+      .cat-heading { font-size: 7.5pt; color: #555; border-bottom-color: #ccc; padding-bottom: 4px; }
+      .grocery-item, .extra-item {
+        padding: 3px 0;
+        border-bottom-color: #eee;
+        background: none !important;
+        gap: 7px;
+        min-height: 0;
+      }
+      .item-check { width: 11px; height: 11px; border: 1px solid #999; background: white; border-radius: 2px; }
+      .item-check-icon { display: none; }
+      .item-name { font-size: 10pt; }
+      .item-source { font-size: 8pt; }
+      .item-amount { font-size: 9pt; }
+      .add-extra-form { display: none; }
     }
 
     /* ── Reduced motion ───────────────────────────────────────────── */
