@@ -1,0 +1,23 @@
+{
+  "name": "Vegetable Fried Rice",
+  "description": "High-heat basmati fried rice with whatever vegetables you have. Use day-old cold rice for the best texture — fresh rice turns mushy.",
+  "servings": 4,
+  "prepTime": "20 min",
+  "tags": ["vegetarian", "asian", "rice", "quick"],
+  "ingredients": [
+    { "name": "Basmati rice, cooked and chilled", "amount": "3",  "unit": "cups", "category": "pantry" },
+    { "name": "Eggs",                             "amount": "3",  "unit": "",     "category": "dairy"  },
+    { "name": "Carrots",                          "amount": "2",  "unit": "",     "category": "produce"},
+    { "name": "Frozen peas",                      "amount": "1",  "unit": "cup",  "category": "produce"},
+    { "name": "Corn, frozen or canned",           "amount": "1",  "unit": "cup",  "category": "produce"},
+    { "name": "Bell pepper",                      "amount": "1",  "unit": "",     "category": "produce"},
+    { "name": "Green onions",                     "amount": "4",  "unit": "",     "category": "produce"},
+    { "name": "Garlic",                           "amount": "4",  "unit": "cloves","category": "produce"},
+    { "name": "Fresh ginger",                     "amount": "1",  "unit": "inch", "category": "produce"},
+    { "name": "Soy sauce",                        "amount": "3",  "unit": "tbsp", "category": "pantry" },
+    { "name": "Oyster sauce",                     "amount": "1",  "unit": "tbsp", "category": "pantry" },
+    { "name": "Sesame oil",                       "amount": "1",  "unit": "tbsp", "category": "pantry" },
+    { "name": "Vegetable oil",                    "amount": "2",  "unit": "tbsp", "category": "pantry" },
+    { "name": "White pepper",                     "amount": "",   "unit": "to taste", "category": "herbs" }
+  ]
+}
