@@ -27,6 +27,9 @@
       --sh-md:        0 4px 8px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.06);
       --sh-lg:        0 12px 28px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
       --r-sm: 6px; --r-md: 10px; --r-lg: 14px;
+      --danger:        #B94040;
+      --danger-border: #D4AAAA;
+      --danger-bg:     #FDF0F0;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -47,6 +50,9 @@
         --sh-sm:        0 1px 2px rgba(0,0,0,.35), 0 1px 3px rgba(0,0,0,.25);
         --sh-md:        0 4px 8px rgba(0,0,0,.35), 0 2px 4px rgba(0,0,0,.25);
         --sh-lg:        0 12px 28px rgba(0,0,0,.55), 0 4px 8px rgba(0,0,0,.35);
+        --danger:        #E06060;
+        --danger-border: #6B3434;
+        --danger-bg:     #2A1A1A;
       }
     }
 
@@ -67,6 +73,9 @@
       --sh-sm:        0 1px 2px rgba(0,0,0,.35), 0 1px 3px rgba(0,0,0,.25);
       --sh-md:        0 4px 8px rgba(0,0,0,.35), 0 2px 4px rgba(0,0,0,.25);
       --sh-lg:        0 12px 28px rgba(0,0,0,.55), 0 4px 8px rgba(0,0,0,.35);
+      --danger:        #E06060;
+      --danger-border: #6B3434;
+      --danger-bg:     #2A1A1A;
     }
 
     /* ── Reset ────────────────────────────────────────────────────── */
@@ -420,6 +429,103 @@
 
     .action-btn.primary:hover { background: var(--primary-h); border-color: var(--primary-h); }
 
+    .action-btn.danger {
+      margin-left: auto;
+      color: var(--danger);
+      border-color: var(--danger-border);
+    }
+
+    .action-btn.danger:hover { background: var(--danger-bg); border-color: var(--danger); }
+
+    /* ── Extras (custom items) ────────────────────────────────────────── */
+    .extras-section { margin-top: 8px; margin-bottom: 36px; }
+
+    .add-extra-form {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .add-extra-input {
+      flex: 1;
+      min-width: 0;
+      padding: 8px 12px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      outline: none;
+      transition: border-color .15s;
+    }
+
+    .add-extra-input::placeholder { color: var(--text-muted); }
+    .add-extra-input:focus { border-color: var(--primary); }
+
+    .add-extra-btn {
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: inherit;
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      border-radius: var(--r-sm);
+      color: var(--primary-fg);
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+
+    .add-extra-btn:hover { background: var(--primary-h); border-color: var(--primary-h); }
+    .add-extra-btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+    .extra-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 11px 6px;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      border-radius: var(--r-sm);
+      -webkit-tap-highlight-color: transparent;
+      transition: background .12s, opacity .2s;
+    }
+
+    .extra-item:last-of-type { border-bottom: none; }
+    .extra-item:hover { background: var(--surface-2); }
+    .extra-item.done { opacity: .38; }
+    .extra-item:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+    .extra-item.done .item-check {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .extra-item.done .item-check-icon { opacity: 1; }
+    .extra-item.done .item-name { text-decoration: line-through; }
+
+    .extra-del {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: 0;
+      transition: color .12s, background .12s;
+    }
+
+    .extra-del:hover { color: var(--danger); background: var(--danger-bg); }
+
     /* ── Category sections ────────────────────────────────────────── */
     .category-section { margin-bottom: 36px; }
 
@@ -636,6 +742,7 @@
           <button class="action-btn" id="uncheck-btn" onclick="uncheckAll()">Uncheck all</button>
           <button class="action-btn primary" onclick="shareList()">Share</button>
           <button class="action-btn" onclick="window.print()">Print</button>
+          <button class="action-btn danger" onclick="resetAll()">Start over</button>
         </div>
       </div>
       <div id="grocery-list"></div>
@@ -674,6 +781,7 @@ const S = {
   order:    [],        // slug order from index.json
   selected: new Set(), // selected recipe slugs
   checked:  new Set(), // "slug::i" keys for items already-have
+  extras:   [],        // [{id, name, done}] custom items added manually
   view:     'recipes',
 };
 
@@ -697,6 +805,7 @@ function loadState() {
     // Only restore selections from localStorage if no URL was provided
     if (!hash) (saved.selected || []).forEach(s => S.selected.add(s));
     (saved.checked  || []).forEach(k => S.checked.add(k));
+    S.extras = (saved.extras || []).filter(e => e && e.id && e.name);
   } catch (_) {}
 }
 
@@ -709,6 +818,7 @@ function saveState() {
     localStorage.setItem('dinnerplan_v1', JSON.stringify({
       selected: [...S.selected],
       checked:  [...S.checked],
+      extras:   S.extras,
     }));
   } catch (_) {}
 }
@@ -812,14 +922,14 @@ function renderGrocery() {
   const listEl  = document.getElementById('grocery-list');
   const recipes = document.getElementById('grocery-recipes');
 
-  if (!S.selected.size) {
+  if (!S.selected.size && !S.extras.length) {
     empty.hidden   = false;
     content.hidden = true;
     return;
   }
 
   // Selections exist from URL/localStorage but recipes not fetched yet
-  if (!Object.keys(S.recipes).length) {
+  if (S.selected.size && !Object.keys(S.recipes).length) {
     empty.hidden   = true;
     content.hidden = false;
     recipes.textContent = '';
@@ -879,6 +989,38 @@ function renderGrocery() {
       ${rows}
     </div>`;
   }).join('');
+
+  // Extras (custom items) section always appears at the bottom
+  const extrasHtml = S.extras.map(e =>
+    `<div class="extra-item${e.done ? ' done' : ''}"
+          data-extra-id="${x(e.id)}"
+          role="checkbox"
+          aria-checked="${e.done}"
+          tabindex="0">
+      <div class="item-check" aria-hidden="true">
+        <svg class="item-check-icon" viewBox="0 0 10 10" fill="none"
+             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="1.5,5 4,7.5 8.5,2.5"/>
+        </svg>
+      </div>
+      <div class="item-body">
+        <div class="item-name">${x(e.name)}</div>
+      </div>
+      <button class="extra-del" aria-label="Remove ${x(e.name)}"
+              onclick="event.stopPropagation(); removeExtra('${e.id.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')">×</button>
+    </div>`
+  ).join('');
+
+  listEl.innerHTML += `<div class="extras-section">
+    <div class="cat-heading">Extra Items</div>
+    ${extrasHtml}
+    <div class="add-extra-form">
+      <input class="add-extra-input" id="extra-input" type="text"
+             placeholder="Add an item…" maxlength="120"
+             onkeydown="if(event.key==='Enter')addExtra()">
+      <button class="add-extra-btn" onclick="addExtra()">Add</button>
+    </div>
+  </div>`;
 }
 
 function updateFloat() {
@@ -924,6 +1066,7 @@ function toggleItem(key) {
 
 function uncheckAll() {
   S.checked.clear();
+  S.extras.forEach(e => { e.done = false; });
   saveState();
   renderGrocery();
 }
@@ -933,6 +1076,45 @@ function clearSelections() {
   S.checked.clear();
   saveState();
   render();
+}
+
+function resetAll() {
+  if (!confirm('Start over? This clears all recipes, checked items, and extra items.')) return;
+  S.selected.clear();
+  S.checked.clear();
+  S.extras = [];
+  saveState();
+  switchView('recipes');
+  render();
+}
+
+function addExtra() {
+  const input = document.getElementById('extra-input');
+  const name = (input?.value || '').trim();
+  if (!name) return;
+  S.extras.push({ id: String(Date.now() + Math.random()), name, done: false });
+  saveState();
+  renderGrocery();
+  // Re-focus the input after re-render
+  document.getElementById('extra-input')?.focus();
+}
+
+function removeExtra(id) {
+  S.extras = S.extras.filter(e => e.id !== id);
+  saveState();
+  renderGrocery();
+}
+
+function toggleExtra(id) {
+  const e = S.extras.find(e => e.id === id);
+  if (e) e.done = !e.done;
+  saveState();
+  // Patch DOM directly
+  const el = document.querySelector(`.extra-item[data-extra-id="${CSS.escape(id)}"]`);
+  if (el) {
+    el.classList.toggle('done', e.done);
+    el.setAttribute('aria-checked', String(e.done));
+  }
 }
 
 function switchView(v) {
@@ -965,9 +1147,11 @@ async function shareList() {
 }
 
 function buildShareText() {
-  if (!S.selected.size) return '';
+  if (!S.selected.size && !S.extras.length) return '';
   const names = [...S.selected].filter(s => S.recipes[s]).map(s => S.recipes[s].name);
-  const lines = ['🛒 Grocery List', `From: ${names.join(', ')}`, ''];
+  const lines = ['🛒 Grocery List'];
+  if (names.length) lines.push(`From: ${names.join(', ')}`);
+  lines.push('');
 
   const byCat = {};
   [...S.selected].forEach(slug => {
@@ -990,6 +1174,13 @@ function buildShareText() {
     });
     lines.push('');
   });
+
+  const uncheckedExtras = S.extras.filter(e => !e.done);
+  if (uncheckedExtras.length) {
+    lines.push('OTHER');
+    uncheckedExtras.forEach(e => lines.push(`• ${e.name}`));
+    lines.push('');
+  }
 
   return lines.join('\n').trim();
 }
@@ -1030,12 +1221,16 @@ document.getElementById('recipe-grid').addEventListener('keydown', e => {
 document.addEventListener('click', e => {
   const item = e.target.closest('.grocery-item');
   if (item && item.dataset.key) toggleItem(item.dataset.key);
+  const extra = e.target.closest('.extra-item');
+  if (extra && extra.dataset.extraId && !e.target.closest('.extra-del')) toggleExtra(extra.dataset.extraId);
 });
 
 document.addEventListener('keydown', e => {
   if (e.key !== ' ' && e.key !== 'Enter') return;
   const item = e.target.closest('.grocery-item');
   if (item && item.dataset.key) { e.preventDefault(); toggleItem(item.dataset.key); }
+  const extra = e.target.closest('.extra-item');
+  if (extra && extra.dataset.extraId) { e.preventDefault(); toggleExtra(extra.dataset.extraId); }
 });
 
 /* ─────────────────────────────────────────────────────────────────────
