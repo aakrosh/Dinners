@@ -1,0 +1,83 @@
+{
+  "name": "Beef Stroganoff",
+  "description": "This creamy beef stroganoff is made with tender beef, hearty mushrooms, broth, mustard, white wine, and sour cream for the most delicious results!",
+  "servings": 8,
+  "prepTime": "90 min",
+  "tags": [
+    "publisher-tested"
+  ],
+  "ingredients": [
+    {
+      "name": "Beef chuck roast",
+      "amount": "2",
+      "unit": "pounds",
+      "category": "meat"
+    },
+    {
+      "name": "Salt",
+      "amount": "0.5",
+      "unit": "teaspoon",
+      "category": "herbs"
+    },
+    {
+      "name": "Ground black pepper",
+      "amount": "0.5",
+      "unit": "teaspoon",
+      "category": "herbs"
+    },
+    {
+      "name": "Butter",
+      "amount": "4",
+      "unit": "ounces",
+      "category": "dairy"
+    },
+    {
+      "name": "Green onions, sliced",
+      "amount": "4",
+      "unit": "",
+      "category": "produce"
+    },
+    {
+      "name": "All-purpose flour",
+      "amount": "4",
+      "unit": "tablespoons",
+      "category": "pantry"
+    },
+    {
+      "name": "Can condensed beef broth",
+      "amount": "1",
+      "unit": "",
+      "category": "meat"
+    },
+    {
+      "name": "Prepared mustard",
+      "amount": "1",
+      "unit": "teaspoon",
+      "category": "pantry"
+    },
+    {
+      "name": "Can sliced mushrooms, drained",
+      "amount": "1",
+      "unit": "",
+      "category": "produce"
+    },
+    {
+      "name": "Sour cream",
+      "amount": "0.33333334326744",
+      "unit": "cup",
+      "category": "dairy"
+    },
+    {
+      "name": "White wine",
+      "amount": "0.33333334326744",
+      "unit": "cup",
+      "category": "pantry"
+    },
+    {
+      "name": "salt and ground black pepper",
+      "amount": "",
+      "unit": "to taste",
+      "category": "herbs"
+    }
+  ]
+}
