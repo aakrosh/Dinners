@@ -1,0 +1,17 @@
+{
+  "name": "No-Boil Classic Lasagna",
+  "description": "A time-saving classic lasagna using uncooked noodles — all the same flavor, none of the pre-boiling.",
+  "servings": 8,
+  "prepTime": "1 hr 15 min",
+  "tags": ["italian", "pasta", "comfort", "beef", "baked"],
+  "ingredients": [
+    { "name": "Mueller's no-boil lasagna noodles", "amount": "8",  "unit": "",    "category": "pantry" },
+    { "name": "Ground beef or Italian sausage",    "amount": "1",  "unit": "lb",  "category": "meat"   },
+    { "name": "Pasta sauce",                       "amount": "52", "unit": "oz",  "category": "pantry" },
+    { "name": "Ricotta cheese",                    "amount": "15", "unit": "oz",  "category": "dairy"  },
+    { "name": "Mozzarella cheese, divided",        "amount": "2",  "unit": "cups","category": "dairy"  },
+    { "name": "Parmesan cheese",                   "amount": "½",  "unit": "cup", "category": "dairy"  },
+    { "name": "Eggs",                              "amount": "2",  "unit": "",    "category": "dairy"  },
+    { "name": "Parsley flakes",                    "amount": "1",  "unit": "tsp", "category": "herbs"  }
+  ]
+}
